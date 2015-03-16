@@ -1,0 +1,18 @@
+{{left_sidebar_enabled=True}}
+{{right_sidebar_enabled=True}}
+{{extend 'layout.html'}}
+
+{{block right_sidebar}}
+<div class='well'>
+Toplinks
+</div>
+{{end}}
+
+{{=form}}
+<script>jQuery('textarea').css('width','600px').css('height','50px');</script>
+{{for post in posts:}}
+<div class="well">
+  <p>{{=name_of(post.posted_by)}} am {{=post.posted_on}}:</p>
+  {{=MARKMIN(post.body)}}
+</div>
+{{pass}}
