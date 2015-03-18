@@ -6,13 +6,18 @@
 <div class='well'>
 Toplinks
 </div>
+<div class='well'>
+Tags
+</div>
 {{end}}
 
 {{=form}}
-<script>jQuery('textarea').css('width','600px').css('height','50px');</script>
+<script>jQuery('textarea').css('width','40em').css('height','4em');</script>
 {{for post in posts:}}
-<div class="well">
-  <p>{{=name_of(post.posted_by)}} am {{=post.posted_on}}:</p>
-  {{=MARKMIN(post.body)}}
+<div class="panel panel-info">
+  <div class="panel-body">
+    {{=MARKMIN(post.body)}}
+  </div>
+  <div class="panel-footer">{{=name_of(post.posted_by)}} am {{=post.posted_on}}</div>
 </div>
 {{pass}}
