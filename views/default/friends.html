@@ -1,5 +1,5 @@
 {{extend 'layout.html'}}
-<h2>Friendship Offered</h2>
+<h2>{{=T('Friendship Offered')}}</h2>
 <table>
   {{for friend in friends:}}
   <tr>
@@ -9,7 +9,7 @@
   </tr>
   {{pass}}
 </table>
-<h2>Friendship Requested</h2>
+<h2>{{=T('Friendship Requested')}}</h2>
 <table>
   {{for friend in requests:}}
   <tr>

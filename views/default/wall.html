@@ -1,15 +1,14 @@
 {{left_sidebar_enabled=True}}
 {{right_sidebar_enabled=True}}
-
 {{extend 'layout.html'}}
 <h2>{{=T('Profile')}}</h2>
 {{=crud.read(db.auth_user, user)}}
 <h2>{{=T('Messages')}}</h2>
 {{for post in posts:}}
 <div class="panel panel-default">
-  <div class="panel panel-body">
+  <div class="panel-body">
     {{=MARKMIN(post.body)}}
   </div>
-  <div class="panle panel-footer">{{=name_of(post.posted_by)}} am {{=post.posted_on}}</div>
+  <div class="panel-footer">{{=name_of(post.posted_by)}} {{=T('on')}} {{=post.posted_on}}</div>
 </div>
 {{pass}}
